@@ -1,0 +1,49 @@
+import sys
+from datetime import datetime
+from datetime import time
+from datetime import date
+from datetime import timedelta
+
+# Question 1 presented in DD/MM/YYYY
+print("Question 1")
+print()
+
+dt = datetime.now()
+dt_string = dt.strftime("%d/%m/%Y %H:%M:%S")
+print(dt_string)
+
+# Question 2 presented in DD/MM/YYYY
+print()
+print("Question 2")
+print()
+
+d = dt + timedelta(days=731, seconds=-60)
+d_string = d.strftime("%d/%m/%Y %H:%M:%S")
+print(d_string)
+
+# Question 3 presented in day, hour:minute:second
+print()
+print("Question 3:")
+print()
+
+d = timedelta(days=100, hours=10, minutes=13)
+print(d)
+
+# Question 4 
+print()
+print("Question 4:")
+print()
+
+class f_i_time():
+  def __init__(self,feet,inches):
+    self.feet=feet
+    self.inches=inches
+    self.time=datetime.now()
+
+  def func(self):
+    print(("Feet: {0}, Inches: {1}, Time Created: {2}").format(self.feet,self.inches,self.time))
+
+new_object = f_i_time(6,4)
+print(new_object.func())
+
+# End of Questions
